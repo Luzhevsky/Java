@@ -1,0 +1,11 @@
+# coment
+/Java_no_git
+/Proframs_from_book
+/Test_remember
+
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
