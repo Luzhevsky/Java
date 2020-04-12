@@ -8,16 +8,16 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class QuizCardBuilder {
+
     JFrame frame;
     JPanel panel1;
     JButton buttonNext;
     JTextArea textFieldQuestion;
     JTextArea textFieldAnswer;
-
     ArrayList<QuizCard> cardList;
 
     public void GUI() {
-        frame = new JFrame("QuizCardBuilder");
+        frame = new JFrame("Создание карт");
         panel1 = new JPanel();
 
 //menubar
@@ -76,7 +76,7 @@ public class QuizCardBuilder {
         frame.setJMenuBar(menu);
 
 
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(500, 600);
         frame.setVisible(true);
     }
@@ -119,16 +119,8 @@ public class QuizCardBuilder {
         }
     }
 
-
-
-
-
-
-
     public static void main(String[] args) {
 	// write your code here
-        QuizCardBuilder builder = new QuizCardBuilder();
-//        builder.GUI();
         QuizCardPlayer player = new QuizCardPlayer();
         player.go();
     }
