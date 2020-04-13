@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Main {
@@ -55,6 +56,14 @@ public class Main {
         JButton downTempo = new JButton("Tempo Down");
         downTempo.addActionListener(new MyDownTempoListener());
         buttonBox.add(downTempo);
+
+        JButton serializelt = new JButton("serializelt");
+        serializelt.addActionListener(new Serializelt());
+        buttonBox.add(serializelt);
+
+        JButton restore = new JButton("restore");
+        restore.addActionListener(new Restore());
+        buttonBox.add(restore);
 
         Box nameBox = new Box(BoxLayout.Y_AXIS);
         for (int i = 0; i < 16; i++) {
@@ -162,6 +171,71 @@ public class Main {
         public void actionPerformed(ActionEvent e) {
             float tempoFactor = sequencer.getTempoFactor();
             sequencer.setTempoFactor((float) (tempoFactor * .97));
+        }
+    }
+
+    public class Serializelt implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            try {
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.showOpenDialog(theFrame);
+                saveFile(fileChooser.getSelectedFile());
+
+
+//                BufferedReader reader = new BufferedReader(new FileReader(file));
+//                FileOutputStream fileStream = new FileOutputStream(new File("checkbox.ser"));
+//                ObjectOutputStream os = new ObjectOutputStream(fileStream);
+//                os.writeObject(checkbox);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    private void saveFile(File file){
+        boolean[] checkbox = new boolean[256];
+        for (int i = 0; i < checkbox.length; i++) {
+            JCheckBox check = checkboxList.get(i);
+            if(check.isSelected()){
+                checkbox[i] = true;
+            }
+        }
+        try{////////////////////////////////////////////////////////////////////////////////////////////////
+                BufferedWriter writer= new BufferedWriter(new FileWriter(file));
+//                FileOutputStream fileStream = new FileOutputStream(new File("checkbox.ser"));
+//                ObjectOutputStream os = new ObjectOutputStream(fileStream);
+//                writer.
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
+/////////////////////////////////////
+    public class Restore implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            boolean[] checkboxState = null;
+            try{
+                FileInputStream inputStream = new FileInputStream(new File("checkbox.ser"));
+                ObjectInputStream ob = new ObjectInputStream(inputStream);
+                checkboxState = (boolean[]) ob.readObject();
+
+            } catch(Exception ex){
+                ex.printStackTrace();
+            }
+            for (int i = 0; i < 256; i++) {
+                JCheckBox check = checkboxList.get(i);
+                if(checkboxState[i]) {
+                    check.setSelected(true);
+                } else {
+                    check.setSelected(false);
+                }
+            }
+            sequencer.stop();
+            buildTrackAndStart();
         }
     }
 
