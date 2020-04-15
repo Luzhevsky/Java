@@ -180,9 +180,8 @@ public class Main {
 
             try {
                 JFileChooser fileChooser = new JFileChooser();
-                fileChooser.showOpenDialog(theFrame);
+                fileChooser.showSaveDialog(theFrame);
                 saveFile(fileChooser.getSelectedFile());
-
 
 //                BufferedReader reader = new BufferedReader(new FileReader(file));
 //                FileOutputStream fileStream = new FileOutputStream(new File("checkbox.ser"));
@@ -202,41 +201,45 @@ public class Main {
                 checkbox[i] = true;
             }
         }
-        try{////////////////////////////////////////////////////////////////////////////////////////////////
-                BufferedWriter writer= new BufferedWriter(new FileWriter(file));
-//                FileOutputStream fileStream = new FileOutputStream(new File("checkbox.ser"));
-//                ObjectOutputStream os = new ObjectOutputStream(fileStream);
-//                writer.
+        try{
+                FileOutputStream fileStream = new FileOutputStream(file);
+                ObjectOutputStream os = new ObjectOutputStream(fileStream);
+                os.writeObject(checkbox);
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
 
-/////////////////////////////////////
     public class Restore implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            boolean[] checkboxState = null;
-            try{
-                FileInputStream inputStream = new FileInputStream(new File("checkbox.ser"));
-                ObjectInputStream ob = new ObjectInputStream(inputStream);
-                checkboxState = (boolean[]) ob.readObject();
-
-            } catch(Exception ex){
-                ex.printStackTrace();
-            }
-            for (int i = 0; i < 256; i++) {
-                JCheckBox check = checkboxList.get(i);
-                if(checkboxState[i]) {
-                    check.setSelected(true);
-                } else {
-                    check.setSelected(false);
-                }
-            }
-            sequencer.stop();
-            buildTrackAndStart();
+            JFileChooser chooser = new JFileChooser();
+            chooser.showOpenDialog(theFrame);
+            loadFile(chooser.getSelectedFile());
         }
+    }
+    public void loadFile(File file){
+        boolean[] checkboxState = null;
+        try{
+            FileInputStream inputStream = new FileInputStream(file);
+            ObjectInputStream ob = new ObjectInputStream(inputStream);
+            checkboxState = (boolean[]) ob.readObject();
+
+        } catch(Exception ex){
+            ex.printStackTrace();
+        }
+        for (int i = 0; i < 256; i++) {
+            JCheckBox check = checkboxList.get(i);
+            if(checkboxState[i]) {
+                check.setSelected(true);
+            } else {
+                check.setSelected(false);
+            }
+        }
+        sequencer.stop();
+        buildTrackAndStart();
     }
 
     public void makeTracks(int[] list) {

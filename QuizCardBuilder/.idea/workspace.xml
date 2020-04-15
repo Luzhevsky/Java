@@ -7,9 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f97a999d-3591-4b6b-b3c9-8ab9b15e0570" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../BeatBox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatBox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatBox/out/artifacts/Swing_jar/Swing.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatBox/out/artifacts/Swing_jar/Swing.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatBox/out/production/Swing/Main_package/Main$Restore.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatBox/out/production/Swing/Main_package/Main$Restore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatBox/out/production/Swing/Main_package/Main$Serializelt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatBox/out/production/Swing/Main_package/Main$Serializelt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatBox/out/production/Swing/Main_package/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatBox/out/production/Swing/Main_package/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BeatBox/src/Main_package/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BeatBox/src/Main_package/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuizCardBuilder/com/company/QuizCardPlayer$OpenMenuListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuizCardBuilder/com/company/QuizCardPlayer$OpenMenuListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuizCardBuilder/com/company/QuizCardPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/QuizCardBuilder/com/company/QuizCardPlayer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +26,8 @@
     <session id="-894061716">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -30,18 +35,18 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="3888" />
+          <entry key="java" value="3901" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3888" />
+          <entry key="JAVA" value="3901" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -64,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/QuizCardBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
+            <state relative-caret-position="276">
+              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/QuizCardPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1666">
-              <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+            <state relative-caret-position="276">
+              <caret line="111" column="24" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,8 +117,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/QuizCardBuilderTest.groovy" />
         <option value="$PROJECT_DIR$/src/com/company/QuizCard.java" />
-        <option value="$PROJECT_DIR$/src/com/company/QuizCardBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/company/QuizCardPlayer.java" />
+        <option value="$PROJECT_DIR$/src/com/company/QuizCardBuilder.java" />
       </list>
     </option>
   </component>
@@ -144,16 +149,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586718571689" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586984878469" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java_no_git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -206,7 +211,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21376519" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21700405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -253,30 +258,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/QuizCardBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/QuizCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/QuizCardPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+        <state relative-caret-position="276">
+          <caret line="111" column="24" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/QuizCard.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/QuizCardBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="276">
+          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
