@@ -6,9 +6,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Iterator;
-/* 
-Добрая Зинаида и летние каникулы
-*/
+
 
 public class Solution {
     public static Map<String, Date> createMap() throws ParseException {
@@ -25,12 +23,10 @@ public class Solution {
         map.put("Закиров", dateFormat.parse("NOVEMBER 12 1995"));
         map.put("Антонов", dateFormat.parse("AUGUST 8 2008"));
 
-        //напишите тут ваш код
         return map;
     }
 
     public static void removeAllSummerPeople(Map<String, Date> map) {
-        //напишите тут ваш код
         Map<String, Date> date_m = map;
         Iterator iter = map.values().iterator();
         
