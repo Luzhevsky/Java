@@ -11,6 +11,7 @@ target/
 *.info
 *.properties
 *.jar
+*.jrtc
 
 /2.JavaCore/
 /3.JavaMultithreading/
