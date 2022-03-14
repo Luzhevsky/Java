@@ -1,6 +1,30 @@
 package com.Chapter3.Operators.ShiftOperator;
 
 public class Main {
+    void f(boolean b){
+        System.out.println(b);
+    }
+    public void metodString(String a, String b){
+        //Операции сравнения и логические операции
+        //!f(a > b);
+        //!f(a >= b);
+        //!f(a < b);
+        //!f(a <= b);
+        //!f(!a);
+        //!f(a && b);
+        //!f(a || b);
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.print("a == b = ");
+        f(a == b);
+        System.out.print("a != b = ");
+        f(a != b);
+        System.out.print("a.equals(b) = ");
+        f(a.equals(b));
+        System.out.print("!a.equals(b) = ");
+        f(!a.equals(b));
+
+    }
     public static void main(String[] args) {
         int a = 0x9;
         System.out.println(Integer.toBinaryString(a));
@@ -37,5 +61,13 @@ public class Main {
         System.out.println();
         int cod = (int) e;
         System.out.println("cod=" + cod);
+        //14 String
+        Main m = new Main();
+        System.out.println("string 14");
+
+        m.metodString("abc", "a");
+        m.metodString("abc", "abc");
+        String str = new String("abc");
+        m.metodString("abc", str);
     }
 }
