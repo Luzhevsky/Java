@@ -7,11 +7,18 @@ public class Main {
     final static int B1=0x3;
     final static int B2=0x4;
 
+    static int test(int testval, int begin, int end){  //5 1 10
+        if (testval>= begin && testval <= end)
+            return 1;
+        else
+            return 0;
+    }
+
     public static void main(String[] args) {
         System.out.println("helloControlStructures");
         System.out.println("helloworld");
         //Задание 1.
-        for (int i = 1; i < 100; i++) {
+        for(int i = 1; i < 100; i++) {
 //            System.out.println(i);
         }
 
@@ -70,6 +77,36 @@ public class Main {
         }
         System.out.println("bs=" + bs);
 
+        //Задание 6. метод test см. вверх
+        System.out.println(test(-5,1,10));
+        //Задание 7.
+        for(int i = 1; i <= 100; i++) {
+//            System.out.println(i);
+//            if(i==99)break;
+        }
+        //Задание 8.
+        System.out.println("switch");
+        for (int i = 1; i < 6; i++) {
 
+            switch (i) {
+                case 1:
+                    System.out.println(1);
+
+                case 2:
+                    System.out.println(2);
+
+                case 3:
+                    System.out.println(3);
+
+                case 4:
+                    System.out.println(4);
+
+                case 5:
+                    System.out.println(5);
+
+                default:
+                    System.out.println("default");
+            }
+        }
     }
 }
