@@ -1,7 +1,7 @@
 package com.Chapter3.Operators.Fibonacci;
 
 public class FibonacciMain {
-        public static void Fibonacci(int f){
+        public static void Fibonacci2(int f){
             //1 1 2 3 5 8 13 21
             int f0 = 1;
             int f1 = 0;
@@ -16,7 +16,21 @@ public class FibonacciMain {
             }
 
         }
+        public static void Fibonacci(int f){
+            int f0 = 0;
+            int f1 = 1;
+            int fib = 0;
+            if (f > 1){
+                System.out.println(f1);
+            }
+            for (int i = 1; i < f; i++) {
+                fib = f0 + f1; // fib=1,f0=0,f1=1 2)fib=2,f0=1,f1=1 3)fib
+                System.out.println(fib);
+                f0 = f1; //1 1
+                f1 = fib; //1 2
+            }
+        }
     public static void main(String[] args) {
-        Fibonacci(11);
+        Fibonacci(21);
     }
 }
