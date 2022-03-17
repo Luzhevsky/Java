@@ -55,24 +55,24 @@ public class Vampires {
             //str3 v1 v4
             if(v1 != 0 && v2 != 0){
                 if(i == str3 * str_2_2){
-                    System.out.println("Это число вампир = " + i);
+                    System.out.println("Это число вампир = " + str_3 + " * "+ str_2_2 + " = " + i);
                 }
             }
             if(v1 != 0 && v3 != 0){
                 if(i == str3 * str_3_2){
-                    System.out.println("Это число вампир = " + i);
+                    System.out.println("Это число вампир = " + str_3 + " * "+ str_3_2 + " = " + i);
                 }
             }
 
             //str_2
             if(v2 != 0 && v3 != 0){
                 if(i == str_2 * str_3_3){
-                    System.out.println("Это число вампир = " + i);
+                    System.out.println("Это число вампир = " + str_2 + " * "+ str_3_3 + " = " + i);
                 }
             }
             if(v2 != 0){
                 if(i == str_2 * str_4_3){
-                    System.out.println("Это число вампир = " + i);
+                    System.out.println("Это число вампир = " + str_2 + " * "+ str_4_3 + " = " + i);
                 }
             }
 
@@ -84,7 +84,7 @@ public class Vampires {
 //            }
             if(v2 != 0){
                 if(i == str_2_2 * str_4){
-                    System.out.println("Это число вампир = " + i);
+                    System.out.println("Это число вампир = " + str_2_2 + " * "+ str_4 + " = " + i);
                 }
             }
 
@@ -96,7 +96,7 @@ public class Vampires {
 //            }
             if(v2 != 0 && v3 != 0){
                 if(i == str_2_3 * str_3){
-                    System.out.println("Это число вампир = " + i);
+                    System.out.println("Это число вампир = " + str_2_3 + " * "+ str_3 + " = " + i);
                 }
             }
 
@@ -108,7 +108,7 @@ public class Vampires {
 //            }
             if(v3 != 0){
                 if(i == str_3 * str_4_2){
-                    System.out.println("Это число вампир = " + i);
+                    System.out.println("Это число вампир = " + str_3 + " * "+ str_4_2 + " = " + i);
                 }
             }
             //str_3_2 v3v2
@@ -119,7 +119,7 @@ public class Vampires {
 //            }
             if(v3 != 0){
                 if(i == str_3_2 * str_4){
-                    System.out.println("Это число вампир = " + i);
+                    System.out.println("Это число вампир = " + str_3_2 + " * "+ str_4 + " = " + i);
                 }
             }
             //str_3_3 v3v4
