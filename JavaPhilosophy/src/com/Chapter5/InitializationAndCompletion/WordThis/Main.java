@@ -6,13 +6,17 @@ public class Main {
         Cat c = new Cat("Мышка");
         c.eatSound();
         System.out.println();
+        //Задание 9.
         Dog d = new Dog(10);
         Dog d2 = new Dog("Дик");
         d.ssout();
         d.age = 1;
         d.ssout();
+
         d2.ssout();
         d2.age = 1;
         d2.ssout();
+        System.out.println(d);
+        d.sthis();
     }
 }
