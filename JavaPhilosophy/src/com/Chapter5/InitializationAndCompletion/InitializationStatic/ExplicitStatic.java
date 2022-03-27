@@ -9,6 +9,10 @@ public class ExplicitStatic {
 
         //Задание 14.
         StringStatic.f();
+
+        //Задание 15.
+        System.out.println("Задание 15");
+        new DerivativeString();
     }
 //    static Cups cups1 = new Cups();
 }
