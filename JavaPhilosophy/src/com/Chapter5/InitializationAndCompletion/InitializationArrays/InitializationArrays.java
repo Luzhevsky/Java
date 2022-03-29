@@ -11,6 +11,7 @@ public class InitializationArrays {
         //Задание 17.
         ClassWithConstructorArrays[] ar;
         ar = new ClassWithConstructorArrays[3];
+        //Задание 18
         ar[0] = new ClassWithConstructorArrays("Объект 0");
         ar[1] = new ClassWithConstructorArrays("Объект 1");
         ar[2] = new ClassWithConstructorArrays("Объект 2");
