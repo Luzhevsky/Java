@@ -13,6 +13,7 @@ public class ExplicitStatic {
         //Задание 15.
         System.out.println("Задание 15");
         new DerivativeString();
+
     }
 //    static Cups cups1 = new Cups();
 }

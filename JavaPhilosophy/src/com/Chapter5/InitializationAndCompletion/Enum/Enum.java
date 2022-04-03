@@ -1,5 +1,4 @@
 package com.Chapter5.InitializationAndCompletion.Enum;
-
 import java.sql.SQLOutput;
 
 public class Enum {
