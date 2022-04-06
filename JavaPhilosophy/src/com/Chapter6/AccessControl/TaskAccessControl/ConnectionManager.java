@@ -1,6 +1,7 @@
 package com.Chapter6.AccessControl.TaskAccessControl;
 
 class Connection{
+    private Connection(){};
     private static Connection[] massConnection = new Connection[5];
     private static int j = -1;
 
@@ -21,7 +22,6 @@ public class ConnectionManager {
         for (int i = 0; i < 8; i++) {
             System.out.println(Connection.instantiation());
         }
-
 
     }
 }
