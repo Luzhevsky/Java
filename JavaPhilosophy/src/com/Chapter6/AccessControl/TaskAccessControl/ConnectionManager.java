@@ -1,7 +1,7 @@
 package com.Chapter6.AccessControl.TaskAccessControl;
 
 class Connection{
-    private Connection(){};
+    private Connection() {}
     private static Connection[] massConnection = new Connection[5];
     private static int j = -1;
 
