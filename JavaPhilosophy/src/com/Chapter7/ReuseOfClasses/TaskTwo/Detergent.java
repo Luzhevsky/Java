@@ -1,4 +1,4 @@
-package com.Chapter7.ReuseOfClasses.TaksTwo;
+package com.Chapter7.ReuseOfClasses.TaskTwo;
 
 class Cleanser {
     private String s = "Cleanser";

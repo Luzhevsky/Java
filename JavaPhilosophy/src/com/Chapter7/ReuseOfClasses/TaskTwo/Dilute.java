@@ -1,4 +1,4 @@
-package com.Chapter7.ReuseOfClasses.TaksTwo;
+package com.Chapter7.ReuseOfClasses.TaskTwo;
 
 public class Dilute extends Detergent{
     private String s = "Dilute";

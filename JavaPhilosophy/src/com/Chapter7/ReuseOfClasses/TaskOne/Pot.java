@@ -1,4 +1,4 @@
-package com.Chapter7.ReuseOfClasses.TaksOne;
+package com.Chapter7.ReuseOfClasses.TaskOne;
 
 import com.Chapter7.ReuseOfClasses.*;
 
