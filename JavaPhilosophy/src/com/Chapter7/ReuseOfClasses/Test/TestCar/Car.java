@@ -41,6 +41,8 @@ class Camera{
 
     public static void main(String[] args) {
         Camera c = new Camera("Уплотненная");
+        Camera c2 = new Camera("Обычная");
         System.out.println(c);
+        System.out.println(c2);
     }
 }
