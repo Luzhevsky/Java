@@ -30,7 +30,7 @@ public class Root {
 class Stem extends Root {
 
     Stem(String s) {
-        super("SuperfromStem");
+        super("SuperFromStem");
         System.out.println(s + " Класс Steam");
     }
 
