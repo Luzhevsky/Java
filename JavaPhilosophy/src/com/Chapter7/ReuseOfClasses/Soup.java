@@ -1,5 +1,7 @@
 package com.Chapter7.ReuseOfClasses;
 
+import com.Chapter7.ReuseOfClasses.TaskFifteen.*;
+
 public class Soup {
     private String v1;
     private String v2;
@@ -29,5 +31,16 @@ public class Soup {
         this.v3 = v3;
     }
 
+
+}
+
+class MethodCallWitchProtected extends ClassWithProtected{
+
+    public static void main(String[] args) {
+        MethodCallWitchProtected c = new MethodCallWitchProtected();
+        c.setDamage(25); //не работает если мы не наследники
+        System.out.println(c.getDamage());//не работает если мы не наследники
+
+    }
 
 }
