@@ -90,11 +90,123 @@ class Array{
         }
     }
 
-    public int findBinary(int value){
-        return 0;
+    /** Сортировки пузырьком
+     *
+     */
+    public void sortBubble(){
+        //нужно отсортировать только элементы которые заполнены в массиве.
+        int m = 0;
+        boolean sorted = false;
+        while(!sorted) {
+            sorted = true;
+            for (int i = 0; i < nElements - 1; i++) {
+                if (a[i] > a[i + 1]) {
+                    m = a[i];
+                    a[i] = a[i + 1];
+                    a[i + 1] = m;
+                    sorted = false;
+                }
+            }
+        }
+    }
+    public void sortBubbleDESC(){
+        //нужно отсортировать только элементы которые заполнены в массиве.
+        int m = 0;
+        boolean sorted = false;
+        while(!sorted) {
+            sorted = true;
+            for (int i = 0; i < nElements - 1; i++) {
+                if (a[i] < a[i + 1]) {
+                    m = a[i];
+                    a[i] = a[i + 1];
+                    a[i + 1] = m;
+                    sorted = false;
+                }
+            }
+        }
+    }
+    public void sortBubble2() {
+        //нужно отсортировать только элементы которые заполнены в массиве.
+        int m = 0;
+        for (int i = 0; i < nElements; i++) {
+            for (int j = 0; j < nElements - 1; j++) {
+                if (a[j] > a[j + 1]) {
+                    m = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = m;
+                }
+
+            }
+        }
     }
 
+//    /**
+//     * Работает только в упорядоченном массиве. Тоесть элемента 1 23 667 25555; по возрастанию.
+//     * @param searchKey
+//     * @return
+//     */
+//
+    public int findBinary(int value){
+        int lowerBorder = 0;
+        int upperBorder = nElements - 1;
+        int center;
+        while (true) {
+            center = (lowerBorder + upperBorder) / 2;
+            if (a[center] == value) {
+                return center; //номер
+            } else if (lowerBorder > upperBorder) {
+                return -1;
+            } else {
+                if (value > a[center]) {
+                    lowerBorder = center + 1;
+                } else {
+                    upperBorder = center - 1;
+                }
+            }
+        }
 
+    }
+
+    /**
+     * Метод getMax возвращает наибольший элемент массива.
+     * @return возвращает элемент массива типа int или -1 если массив пуст.
+     */
+    public int getMax(){
+        int max = a[0];
+        if(nElements > 1){
+            for (int i = 0; i < nElements; i++) {
+                if(a[i] > max){
+                    max = a[i];
+                }
+            }
+            return max;
+        } else {
+            return -1;
+        }
+    }
+
+    /**Удаляет максимальный элеымент массива
+     *
+     * @return возвращает элемент массива и удаляет его
+     */
+    public int maxRemove(){
+        int max = a[0];
+        if(nElements > 1){
+            for (int i = 0; i < nElements; i++) {
+                if(a[i] > max){
+                    max = a[i];
+                }
+            }
+            delete(max);
+            return max;
+        } else {
+            return -1;
+        }
+    }
+
+    /**
+     * С
+     */
 }
 
 class Person {
@@ -223,29 +335,43 @@ class DataPersonArray{
 public class Main {
     public static void main(String[] args) {
         Array a = new Array(10);
-        a.setElem(0, 5);
-        a.setElem(1,102);
-        a.setElem(2,1);
-        a.setElem(3,12);
+        a.setElem(0, 631);
+        a.setElem(1,1);
+        a.setElem(2,102);
+        a.setElem(3,144);
+        a.setElem(4,467);
+        a.setElem(5,292);
+        a.setElem(6,230);
+        a.setElem(7,231);
+        a.setElem(8,232);
+        a.setElem(9,832);
 
         a.display();
-        a.delete(443);
+        a.sortBubble();
         a.display();
 
-        Person p = new Person("Лужевский", "Иван" , 24);
+        System.out.println(a.getMax());
+        System.out.println(a.maxRemove());
+        a.display();
 
-        DataPersonArray personArray = new DataPersonArray(10);
-
-        personArray.insert("Лужевский", "Дмитрий", 26);
-        personArray.insert("Иванов", "Олег", 29);
-        personArray.insert("Турский", "Алексей", 33);
-        personArray.insert("Хусейнов", "Анатолий", 20);
-        personArray.insert("Хусе", "Анатолий", 41);
-        personArray.insert("Сидоров", "Константин", 31);
-        personArray.display();
-        System.out.println();
-        personArray.delete("Иванов");
-        personArray.display();
+//        a.display();
+//        a.delete(443);
+//        a.display();
+//
+//        Person p = new Person("Лужевский", "Иван" , 24);
+//
+//        DataPersonArray personArray = new DataPersonArray(10);
+//
+//        personArray.insert("Лужевский", "Дмитрий", 26);
+//        personArray.insert("Иванов", "Олег", 29);
+//        personArray.insert("Турский", "Алексей", 33);
+//        personArray.insert("Хусейнов", "Анатолий", 20);
+//        personArray.insert("Хусе", "Анатолий", 41);
+//        personArray.insert("Сидоров", "Константин", 31);
+//        personArray.display();
+//        System.out.println();
+//        personArray.delete("Иванов");
+//        personArray.display();
     }
 
 }
