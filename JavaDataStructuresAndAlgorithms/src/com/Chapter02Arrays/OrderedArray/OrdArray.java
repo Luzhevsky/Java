@@ -24,21 +24,89 @@ public class OrdArray {
 
     public void insert(int value) {
         int i;
-        for (i = 0; i < nElement ; i++) {
-            if(value < a[i]){
+        for (i = 0; i < nElement; i++) {
+            if(a[i] > value){
                 break;
             }
         }
-        for (int j = nElement; j > i; j--) {
-            a[j] = a[j-1];
+        for (int j = nElement; i < j ; j--) {
+            a[j] = a[j - 1];
         }
         a[i] = value;
         nElement++;
     }
 
-    public boolean delete(int value){
+    public void insertFindBinary(int value) {
+        int lowerBound = 0;
+        int upperBound = nElement;
+        int center;
+        while(true){
+            center = (lowerBound + upperBound) / 2;
+            if(value > a[center]&& value < a[center + 1]){
+                break;
+            } else  if(lowerBound > upperBound){
+               break;
+            } else {
+                if(!(value > a[center]) && !(value < a[center + 1])) {
+                    upperBound = center - 1;
+                } else {
+                    lowerBound = center + 1;
+                }
+            }
 
-        return true;
+        }
+
+        for (int j = nElement; center < j; j--) {
+            a[j] = a[j - 1];
+        }
+        a[center] = value;
+        nElement++;
+
+    }
+
+    public boolean delete(int value){
+        int f = findBinary(value);
+        //f номер элемента
+        if(f == -1) {
+            return false;
+        } else {
+
+            for (int j = f; j < nElement; j++) {
+                a[j] = a[j + 1];
+            }
+            nElement--;
+            return true;
+        }
+    }
+
+    public int findBinary(int value){
+        int lowerBound = 0;
+        int upperBound = nElement;
+        int center;
+        while(true){
+            center = (lowerBound + upperBound) / 2;
+            if(value == a[center]) {
+                return center;
+            } else if(lowerBound > upperBound){
+                return -1;
+            } else {
+                if(value > a[center]){
+                    lowerBound = center + 1;
+                } else {
+                    upperBound = center - 1;
+                }
+            }
+        }
+    }
+
+    public int find(int value){
+        int i;
+        for (i = 0; i < nElement; i++) {
+            if(a[i] == value){
+                return i;
+            }
+        }
+        return -1;
     }
 
 
@@ -46,12 +114,21 @@ public class OrdArray {
 
 class Main {
     public static void main(String[] args) {
-        OrdArray a = new OrdArray(5);
-        a.insert(15);
-        a.insert(12);
-        a.insert(55);
-        a.insert(18);
+        OrdArray a = new OrdArray(8);
+        a.insertFindBinary(25);
+        a.insertFindBinary(18);
+        a.insertFindBinary(55);
+        a.insertFindBinary(18);
+        a.insertFindBinary(18);
+        a.insertFindBinary(123);
+        a.insertFindBinary(18);
+        a.insertFindBinary(38);
 
         a.display();
+        System.out.println( a.delete(122));
+        a.display();
+        System.out.println(a.findBinary(18));
+        System.out.println(a.find(888));
     }
+
 }
