@@ -42,15 +42,16 @@ public class OrdArray {
         int center;
         while(true){
             center = (lowerBound + upperBound) / 2;
-            if(value > a[center]&& value < a[center + 1]){
+            if(value >= a[center] && value <= a[center + 1]){
+                center++;
                 break;
             } else  if(lowerBound > upperBound){
                break;
             } else {
-                if(!(value > a[center]) && !(value < a[center + 1])) {
-                    upperBound = center - 1;
-                } else {
+                if(value >= a[center]) {
                     lowerBound = center + 1;
+                } else {
+                    upperBound = center - 1;
                 }
             }
 
@@ -114,7 +115,7 @@ public class OrdArray {
 
 class Main {
     public static void main(String[] args) {
-        OrdArray a = new OrdArray(8);
+        OrdArray a = new OrdArray(25);
         a.insertFindBinary(25);
         a.insertFindBinary(18);
         a.insertFindBinary(55);
@@ -122,6 +123,12 @@ class Main {
         a.insertFindBinary(18);
         a.insertFindBinary(123);
         a.insertFindBinary(18);
+        a.insertFindBinary(38);
+        a.insertFindBinary(38);
+        a.insertFindBinary(38);
+        a.insertFindBinary(44);
+        a.insertFindBinary(38);
+        a.insertFindBinary(123);
         a.insertFindBinary(38);
 
         a.display();
