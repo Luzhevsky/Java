@@ -22,6 +22,10 @@ public class OrdArray {
         System.out.println("Количество элементов в массиве = " + nElement);
     }
 
+    /** Insert с сортировкой
+     * Сортировочная вставка элемента.
+     * @param value передаем значение которое хотим занести в массив.
+     */
     public void insert(int value) {
         int i;
         for (i = 0; i < nElement; i++) {
@@ -36,6 +40,10 @@ public class OrdArray {
         nElement++;
     }
 
+    /** Insert с сортитовкой для поиска применялся двоичный поиск.
+     *
+     * @param value передаем значение которое хотим занести в массив.
+     */
     public void insertFindBinary(int value) {
         int lowerBound = 0;
         int upperBound = nElement;
@@ -65,6 +73,11 @@ public class OrdArray {
 
     }
 
+    /** Удаление элемента массива с значением. Использовалась функция findBinary() для поиска элемента
+     *
+     * @param value Значение элемента которое надо удалить
+     * @return  true если удалось удалить false если нет.
+     */
     public boolean delete(int value){
         int f = findBinary(value);
         //f номер элемента
@@ -80,6 +93,11 @@ public class OrdArray {
         }
     }
 
+    /** Двоичный поиск элемента массива. В теории должен быть быстрее обычного.
+     *
+     * @param value Значение элемента которое хотим найти
+     * @return возвращает ключ i или -1 если элемент не найден.
+     */
     public int findBinary(int value){
         int lowerBound = 0;
         int upperBound = nElement;
@@ -100,6 +118,11 @@ public class OrdArray {
         }
     }
 
+    /** Обычный поиск элемента массива.
+     *
+     * @param value Значение которое ищем.
+     * @return i если нашли -1 если нет.
+     */
     public int find(int value){
         int i;
         for (i = 0; i < nElement; i++) {
