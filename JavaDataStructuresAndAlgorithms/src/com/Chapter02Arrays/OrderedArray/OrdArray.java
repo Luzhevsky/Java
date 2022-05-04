@@ -169,6 +169,34 @@ public class OrdArray {
         System.out.println("Количество элементов в массиве = " + m.length);
 
     }
+
+    /** Удаляет все дубликаты в массиве. Сначало присваевая им значения -1, после чего удаляет.
+     *
+     */
+    public void noDubs(){
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                if(a[i] == a[j] && i != j){
+                    a[i] = -1;
+                }
+            }
+        }
+
+        boolean noDub = true;
+        while(noDub) {
+            noDub = false;
+            for (int i = 0; i < nElement; i++) {
+                if (a[i] == -1) {
+                    for (int j = i; j < nElement; j++) {
+                        a[j] = a[j + 1];
+                    }
+                    noDub = true;
+                    nElement--;
+                }
+            }
+        }
+
+    }
 }
 
 class Main {
@@ -176,20 +204,23 @@ class Main {
         OrdArray a = new OrdArray(15);
         OrdArray b = new OrdArray(10);
 
-        Random r = new Random(1);
-
-        for (int i = 0; i < 15; i++) {
-            a.insertFindBinary((r.nextInt(100) + 1));
-        }
-
-        for (int i = 0; i < 10; i++) {
-            b.insertFindBinary((r.nextInt(100) + 1));
-        }
-
+        a.insertFindBinary(25);
+        a.insertFindBinary(251);
+        a.insertFindBinary(25);
+        a.insertFindBinary(14);
+        a.insertFindBinary(35);
+        a.insertFindBinary(18);
+        a.insertFindBinary(18);
+        a.insertFindBinary(18);
+        a.insertFindBinary(48);
+        a.insertFindBinary(48);
+        a.insertFindBinary(48);
+        a.insertFindBinary(48);
+        a.insertFindBinary(48);
+        a.insertFindBinary(48);
         a.display();
-        b.display();
-
-        a.merge(b.getArray());
+        a.noDubs();
+        a.display();
     }
 
 }
