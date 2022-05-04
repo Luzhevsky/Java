@@ -1,5 +1,7 @@
 package com.Chapter02Arrays.OrderedArray;
 
+import java.util.Random;
+
 public class OrdArray {
     private int[] a; // объевляем массив
     private int nElement = 0; //Количество элементов в массиве
@@ -10,6 +12,10 @@ public class OrdArray {
      */
     public OrdArray(int size){
         a = new int[size];
+    }
+
+    public int[] getArray(){
+        return a;
     }
 
     /** метод выводящиий все элементы массива и их количество
@@ -133,32 +139,53 @@ public class OrdArray {
         return -1;
     }
 
+    public void merge(int[] c){
+        int[] m ;
+        if(a.length > c.length){
+            m = new int[a.length];
+        } else {
+            m = new int[c.length];
+        }
 
+        for (int i = 0; i < m.length; i++) {
+            if(m.length > a.length){
+                m[i] =c[i];
+            } else if(m.length > c.length){
+                m[i] = a[i];
+            } else if(a[i] >= c[i]){
+                m[i] = c[i];
+            } else {
+                m[i] = a[i];
+            }
+        }
+
+        for (int i = 0; i < m.length; i++) {
+            System.out.println("m[" + i + "]=" + m[i]);
+        }
+        System.out.println("Количество элементов в массиве = " + m.length);
+
+    }
 }
 
 class Main {
     public static void main(String[] args) {
-        OrdArray a = new OrdArray(25);
-        a.insertFindBinary(25);
-        a.insertFindBinary(18);
-        a.insertFindBinary(55);
-        a.insertFindBinary(18);
-        a.insertFindBinary(18);
-        a.insertFindBinary(123);
-        a.insertFindBinary(18);
-        a.insertFindBinary(38);
-        a.insertFindBinary(38);
-        a.insertFindBinary(38);
-        a.insertFindBinary(44);
-        a.insertFindBinary(38);
-        a.insertFindBinary(123);
-        a.insertFindBinary(38);
+        OrdArray a = new OrdArray(15);
+        OrdArray b = new OrdArray(10);
+
+        Random r = new Random(1);
+
+        for (int i = 0; i < 15; i++) {
+            a.insertFindBinary((r.nextInt(100) + 1));
+        }
+
+        for (int i = 0; i < 10; i++) {
+            b.insertFindBinary((r.nextInt(100) + 1));
+        }
 
         a.display();
-        System.out.println( a.delete(122));
-        a.display();
-        System.out.println(a.findBinary(18));
-        System.out.println(a.find(888));
+        b.display();
+
+        a.merge(b.getArray());
     }
 
 }
