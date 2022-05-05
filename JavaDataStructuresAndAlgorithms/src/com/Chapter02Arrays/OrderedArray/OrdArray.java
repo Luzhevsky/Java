@@ -1,7 +1,5 @@
 package com.Chapter02Arrays.OrderedArray;
 
-import java.util.Random;
-
 public class OrdArray {
     private int[] a; // объевляем массив
     private int nElement = 0; //Количество элементов в массиве
@@ -135,35 +133,32 @@ public class OrdArray {
         return -1;
     }
 
-    /**
-     *
-     */
-    public void merge(){
-
-    }
 
 }
 
 class Main {
     public static void main(String[] args) {
-        OrdArray a = new OrdArray(10);
-        OrdArray b = new OrdArray(15);
-
-        Random rand = new Random(1);
-
-        for (int i = 0; i < 10; i++) {
-//            System.out.println((rand.nextInt(100) + 1));
-            a.insertFindBinary((rand.nextInt(100) + 1));
-        }
-
-        for (int i = 0; i < 15; i++) {
-//            System.out.println((rand.nextInt(100) + 1));
-            b.insertFindBinary((rand.nextInt(100) + 1));
-        }
+        OrdArray a = new OrdArray(25);
+        a.insertFindBinary(25);
+        a.insertFindBinary(18);
+        a.insertFindBinary(55);
+        a.insertFindBinary(18);
+        a.insertFindBinary(18);
+        a.insertFindBinary(123);
+        a.insertFindBinary(18);
+        a.insertFindBinary(38);
+        a.insertFindBinary(38);
+        a.insertFindBinary(38);
+        a.insertFindBinary(44);
+        a.insertFindBinary(38);
+        a.insertFindBinary(123);
+        a.insertFindBinary(38);
 
         a.display();
-        b.display();
-
+        System.out.println( a.delete(122));
+        a.display();
+        System.out.println(a.findBinary(18));
+        System.out.println(a.find(888));
     }
 
 }
