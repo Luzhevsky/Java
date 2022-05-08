@@ -11,6 +11,9 @@ class Instrument {
     public void adjust(){
         System.out.println("Adjusting Instrument");
     }
+    public String toString(){
+        return what();
+    }
 }
 
 class Wind extends Instrument {
@@ -120,6 +123,7 @@ public class Music {
 
     public static void tune(Instrument[] i){
         for(Instrument a : i){
+            System.out.print(a + " ");
             a.play(Note.MIDDLE_C);
         }
 
