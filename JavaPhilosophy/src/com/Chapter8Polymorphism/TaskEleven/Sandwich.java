@@ -25,7 +25,7 @@ class Bread {
  */
 class Cheese {
     Cheese() {
-        System.out.println("Cheese");
+        System.out.println("Cheese()");
     }
 }
 
@@ -38,6 +38,12 @@ class Lettuce {
     }
 }
 
+class Pickle {
+    Pickle(){
+        System.out.println("Pickle()");
+    }
+}
+
 /** Обед(Ланч)
  *
  */
@@ -47,7 +53,7 @@ class Lunch extends Meal {
     }
 }
 
-/** Перенасной Обед
+/** Переносной Обед
  *
  */
 class PortableLunch extends Lunch {
@@ -57,17 +63,18 @@ class PortableLunch extends Lunch {
 }
 
 
-public class Sandwich {
+public class Sandwich extends PortableLunch{
     private Bread b = new Bread();
     private Cheese c = new Cheese();
     private Lettuce l = new Lettuce();
+    private Pickle p = new Pickle();
 
     public Sandwich() {
-        System.out.println("Sandwich");
+        System.out.println("Sandwich()");
     }
     
 
     public static void main(String[] args) {
-
+        new Sandwich();
     }
 }
