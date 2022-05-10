@@ -77,7 +77,6 @@ class Main {
             rodent[i] = getrandom.getR();
         }
 
-
         for(Rodent r : rodent){
             r.run();
             r.gnaw();
