@@ -38,6 +38,9 @@ class Lettuce {
     }
 }
 
+/** Соленый огурец
+ *
+ */
 class Pickle {
     Pickle(){
         System.out.println("Pickle()");
