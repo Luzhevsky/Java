@@ -1,4 +1,4 @@
-package com.Chapter8Polymorphism.TaskSeventeen;
+package com.Chapter8Polymorphism.TaskSeventeenPatternState;
 
 
 public class Starship {
