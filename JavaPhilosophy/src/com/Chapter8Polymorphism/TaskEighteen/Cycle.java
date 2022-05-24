@@ -75,9 +75,5 @@ class Main{
         ((Unicycle)c[1]).balance();
        ((Tricycle)c[2]).balance();
 
-
-
-
-
     }
 }
