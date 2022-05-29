@@ -7,7 +7,7 @@ public class Client implements Person{
     public void reviews() {
         System.out.println("Client.reviews()");
     }
-    
+
     @Override
     public void buy() {
         System.out.println("Client.buy()");
