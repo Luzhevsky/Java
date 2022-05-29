@@ -6,8 +6,8 @@ import java.util.Random;
  *
  */
 interface Rodent {
-    public void gnaw();//Грызть
-    public void run();//Бежать
+    void gnaw();//Грызть
+    void run();//Бежать
 }
 
 class Mouse implements Rodent {
