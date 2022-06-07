@@ -2,6 +2,9 @@ package com.Chapter9Interfaces.Test;
 
 import java.util.Arrays;
 
+// Паттерн стратегия
+
+
 class Processor {
     public String name() {
         return getClass().getSimpleName();
