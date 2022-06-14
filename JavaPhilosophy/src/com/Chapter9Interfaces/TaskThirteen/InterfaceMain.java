@@ -19,7 +19,7 @@ interface Three extends SonMainTwo, SonMainOne {
 
 class test implements SonMainTwo {
     //Должен реализовать и SonMainTwo и его родителя InterfaceMain
-    
+
     @Override
     public void sonTwo() {
 
