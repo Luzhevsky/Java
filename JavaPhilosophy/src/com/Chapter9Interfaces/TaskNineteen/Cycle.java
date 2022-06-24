@@ -1,19 +1,13 @@
 package com.Chapter9Interfaces.TaskNineteen;
 
-public class Cycle {
-    public void ride(){
-        System.out.println("Cycle.ride");
-    }
-    public int wheels() {
-        return 2;
-    }
-    public void balance(){
-        System.out.println("fromCycle");
-    }
+public interface Cycle {
+    public void ride();
+    public int wheels();
+    public void balance();
 }
 
 
-class Unicycle extends Cycle{
+class Unicycle implements Cycle{
     @Override
     public void ride(){
         System.out.println("Unicycle.ride()");
@@ -21,13 +15,12 @@ class Unicycle extends Cycle{
     public int wheels() {
         return 1;
     }
-
     public void balance(){
         System.out.println("Unicycle.balance()");
     }
 }
 
-class Bicycle extends Cycle{
+class Bicycle implements Cycle{
     @Override
     public void ride(){
         System.out.println("Bicycle.ride()");
@@ -35,19 +28,21 @@ class Bicycle extends Cycle{
     public int wheels() {
         return 2;
     }
-
     public void balance(){
-        System.out.println("Bicecle.balance()");
+        System.out.println("Bicycle.balance()");
     }
 }
 
-class Tricycle extends Cycle{
+class Tricycle implements Cycle{
     @Override
     public void ride(){
         System.out.println("Tricycle.ride()");
     }
     public int wheels() {
         return 3;
+    }
+    public void balance() {
+        System.out.println("Tricycle.balance()");
     }
 
 }
