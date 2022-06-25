@@ -1,4 +1,4 @@
-package com.Chapter9Interfaces.TaskNineteen;
+package com.Chapter9Interfaces.TaskEighteen;
 
 public interface Cycle {
     public void ride();
