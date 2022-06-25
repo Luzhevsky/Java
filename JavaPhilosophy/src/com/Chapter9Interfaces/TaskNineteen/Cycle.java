@@ -6,6 +6,9 @@ public interface Cycle {
     public void balance();
 }
 
+interface CycleFactory { //фабрика велосипед
+    Cycle getCycle();
+}
 
 class Unicycle implements Cycle{
     @Override
@@ -20,6 +23,12 @@ class Unicycle implements Cycle{
     }
 }
 
+class UnicycleFactory implements CycleFactory {
+    public Cycle getCycle() {
+        return new Unicycle();
+    }
+}
+
 class Bicycle implements Cycle{
     @Override
     public void ride(){
@@ -30,6 +39,12 @@ class Bicycle implements Cycle{
     }
     public void balance(){
         System.out.println("Bicycle.balance()");
+    }
+}
+
+class BicycleFactory implements CycleFactory {
+    public Cycle getCycle() {
+        return new Bicycle();
     }
 }
 
@@ -47,28 +62,43 @@ class Tricycle implements Cycle{
 
 }
 
+class TricycleFactory implements CycleFactory {
+    public Cycle getCycle() {
+        return new Tricycle();
+    }
+}
+
 
 class Main{
-
+    public static void goCycle(CycleFactory c) {
+        c.getCycle().balance();
+        c.getCycle().ride();
+        System.out.println(c.getCycle().wheels());
+    }
 
     public static void main(String[] args) {
-        Bicycle bicycle = new Bicycle();
-        Unicycle unicycle = new Unicycle();
-        Tricycle tricycle = new Tricycle();
+        goCycle(new TricycleFactory());
+        goCycle(new BicycleFactory());
+        goCycle(new UnicycleFactory());
 
-        Cycle[] c = {
-                new Bicycle(),
-                new Unicycle(),
-                new Tricycle()
-        };
-        c[0].balance();
-        c[1].balance();
-        c[2].balance();
-        System.out.println();
 
-        ((Bicycle)c[0]).balance();
-        ((Unicycle)c[1]).balance();
-       ((Tricycle)c[2]).balance();
+//        Bicycle bicycle = new Bicycle();
+//        Unicycle unicycle = new Unicycle();
+//        Tricycle tricycle = new Tricycle();
+//
+//        Cycle[] c = {
+//                new Bicycle(),
+//                new Unicycle(),
+//                new Tricycle()
+//        };
+//        c[0].balance();
+//        c[1].balance();
+//        c[2].balance();
+//        System.out.println();
+//
+//        ((Bicycle)c[0]).balance();
+//        ((Unicycle)c[1]).balance();
+//       ((Tricycle)c[2]).balance();
 
     }
 }
