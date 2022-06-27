@@ -55,6 +55,11 @@ public class Sequence {
         Sequence.SequenceSelector sequenceSelector = sequence.new SequenceSelector();
         System.out.println(sequenceSelector.returnSequence().getClass());
 
+        //test
+        Sequence s3 = new Sequence();
+        Sequence.SequenceSelector sequenceSelector3 = s3.new SequenceSelector();
+        System.out.println(sequenceSelector3.returnSequence().toString());
+
 
         while(!selector.end()){
             System.out.print(selector.current() + " ");
