@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) {
         Outer o = new Outer();
         System.out.println(o);
-        
+
         Outer.Inner inner = o.returnInner();
         System.out.println(inner);
 
