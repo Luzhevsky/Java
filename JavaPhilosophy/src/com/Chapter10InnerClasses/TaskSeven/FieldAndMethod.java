@@ -1,4 +1,4 @@
-package com.Chapter8Polymorphism.TaskSeven;
+package com.Chapter10InnerClasses.TaskSeven;
 
 public class FieldAndMethod {
     private String field = "FieldOne";

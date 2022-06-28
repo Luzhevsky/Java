@@ -1,4 +1,4 @@
-package com.Chapter10InnerClasses.Eight_2;
+package com.Chapter10InnerClasses.TaskEight_2;
 
 public interface InterfaceOne {
     void getName();
