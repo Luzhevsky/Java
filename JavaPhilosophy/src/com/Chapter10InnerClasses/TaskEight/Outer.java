@@ -29,5 +29,6 @@ class Main {
         Outer o = new Outer();
         o.method1();
         o.method2();
+
     }
 }
