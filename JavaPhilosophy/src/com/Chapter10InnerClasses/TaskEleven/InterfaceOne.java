@@ -4,11 +4,11 @@ public interface InterfaceOne {
     void getName();
 }
 class Outer {
-    String s = "hello";
+    String s = "Hello";
     public void method() {
         System.out.println(s);
     }
-    
+
     public InterfaceOne methodGetLinc() {
         return new InterfaceOne() {
             @Override

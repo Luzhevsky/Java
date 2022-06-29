@@ -1,9 +1,7 @@
-package com.Chapter9Interfaces.TaskTen;
+package com.Chapter9Interfaces.TaskSixteen.TaskTen;
 
 
 import com.Chapter8Polymorphism.TaskEight.Note;
-
-import java.util.Random;
 
 interface Playable {
     void play(Note n);
