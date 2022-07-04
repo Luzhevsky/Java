@@ -30,19 +30,15 @@ class A {
 class B {
     U[] massU = new U[15];
     public int len = 0;
-
     public void saveU(A linkA) {
        massU[len++] = linkA.LinkU();
     }
 
-    public void deleteU(A linkA) {
-        System.out.println(massU[0].hashCode());
-        System.out.println(massU[0]);
-        System.out.println(massU[0].toString());
-        for (int i = 0; i < massU.length; i++) {
+    public void deleteU(int c) {
 
-            if(massU[i] == null) continue;
-            if(linkA.equals(massU[i])){
+
+        for (int i = 0; i < massU.length; i++) {
+            if(i == c){
                 massU[i] = null;
             }
         }
@@ -66,31 +62,17 @@ class Main {
         A one = new A();
         A two = new A();
         A three = new A();
-
-        System.out.println(one.getClass());
-        System.out.println(two.getClass());
-        System.out.println(three.getClass());
-        System.out.println();
-        System.out.println(one.hashCode());
-        System.out.println(two.hashCode());
-        System.out.println(three.hashCode());
-        System.out.println();
-        System.out.println(one);
-        System.out.println(two);
-        System.out.println(three);
         //У разных A разные ссылки, так как они создаются разными внутренними классами.
 
         B oneB = new B();
-        System.out.println(one.hashCode());
         oneB.saveU(one);
-        System.out.println("aaaaaaaaaaaaaaa" + oneB.massU[0].hashCode());
         oneB.saveU(two);
         oneB.saveU(three);
 
 
         oneB.iterationU();
         System.out.println();
-        oneB.deleteU(one);
+        oneB.deleteU(1);
         oneB.iterationU();
 
     }
