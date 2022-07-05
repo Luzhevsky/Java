@@ -35,8 +35,6 @@ class B {
     }
 
     public void deleteU(int c) {
-
-
         for (int i = 0; i < massU.length; i++) {
             if(i == c){
                 massU[i] = null;
