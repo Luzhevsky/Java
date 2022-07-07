@@ -3,7 +3,7 @@ package com.Chapter10InnerClasses.TaskTwentyFree;
 public class GreenhouseController {
     public static void main(String[] args) {
         GreenhouseControls gc = new GreenhouseControls();
-        
+
         gc.addEvent(gc.new Bell(90000));
         Event[] eventList = {
                 gc.new ThermostatNight(0),
