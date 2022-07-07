@@ -1,6 +1,6 @@
-package com.Chapter10InnerClasses.Test.GreenhouseController;
+package com.Chapter10InnerClasses.TaskTwentyTwo;
 
-public class GreenhouseControls extends Controller{
+public class GreenhouseControls extends Controller {
     private boolean light = false;
 
     public class LightOn extends Event {
@@ -88,6 +88,39 @@ public class GreenhouseControls extends Controller{
             return "Термостат использует дневной режим";
         }
     }
+
+    private boolean ventilationGreenhouse = true;
+    public class VentilationGreenhouseOn extends Event {
+        public VentilationGreenhouseOn(long delayTime) {
+            super(delayTime);
+        }
+
+        @Override
+        public void action() {
+            //код управляющий оборудованием.
+            ventilationGreenhouse = true;
+        }
+        public  String toString() {
+            return "Проветривание включено";
+        }
+
+    }
+    public class VentilationGreenhouseOff extends Event {
+        public VentilationGreenhouseOff(long delayTime) {
+            super(delayTime);
+        }
+
+        @Override
+        public void action() {
+            //код управляющий оборудованием.
+            ventilationGreenhouse = false;
+        }
+        public  String toString() {
+            return "Проветривание выключено";
+        }
+
+    }
+
 
     //Пример метода action(), вставляющего новый экземпляр
     //самого себя в список событий
