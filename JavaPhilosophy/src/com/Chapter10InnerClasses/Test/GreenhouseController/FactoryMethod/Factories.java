@@ -1,4 +1,4 @@
-package com.Chapter10InnerClasses.Test.FactoryMethod;
+package com.Chapter10InnerClasses.Test.GreenhouseController.FactoryMethod;
 
 interface Service {
     void method1();
