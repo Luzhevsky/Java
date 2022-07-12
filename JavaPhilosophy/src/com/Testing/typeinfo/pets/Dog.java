@@ -1,4 +1,4 @@
-package com.Chapter11Collections.Test.typeinfo.pets;
+package com.Testing.typeinfo.pets;
 
 
 public class Dog extends Pet {//Собака

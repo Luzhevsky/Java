@@ -1,6 +1,8 @@
 package com.Chapter11Collections.TaskFive;
 
-import com.Chapter11Collections.Test.typeinfo.pets.*;
+import com.Testing.typeinfo.pets.Pet;
+import com.Testing.typeinfo.pets.Pets;
+
 import java.util.List;
 import java.util.Random;
 

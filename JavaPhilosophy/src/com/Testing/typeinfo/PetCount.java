@@ -1,6 +1,7 @@
-package com.Chapter11Collections.Test.typeinfo;
+package com.Testing.typeinfo;
 
-import com.Chapter11Collections.Test.typeinfo.pets.*;
+import com.Testing.typeinfo.pets.*;
+
 import java.util.*;
 
 public class PetCount {

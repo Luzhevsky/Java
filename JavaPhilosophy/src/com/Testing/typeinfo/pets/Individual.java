@@ -1,4 +1,4 @@
-package com.Chapter11Collections.Test.typeinfo.pets;
+package com.Testing.typeinfo.pets;
 
 public class Individual implements Comparable<Individual> {
     private static long counter = 0;
