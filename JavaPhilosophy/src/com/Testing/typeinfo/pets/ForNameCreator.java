@@ -7,14 +7,14 @@ public class ForNameCreator  extends PetCreator {
     private static List<Class<? extends Pet>> types = new ArrayList<Class<? extends Pet>>();
     //Типы которые должны создаваться случайным образом:
     private static String[] typeNames = {
-            "com.Chapter11Collections.Test.typeinfo.pets.Mutt",
-            "com.Chapter11Collections.Test.typeinfo.pets.Pug",
-            "com.Chapter11Collections.Test.typeinfo.pets.EgyptianMau",
-            "com.Chapter11Collections.Test.typeinfo.pets.Manx",
-            "com.Chapter11Collections.Test.typeinfo.pets.Cymric",
-            "com.Chapter11Collections.Test.typeinfo.pets.Rat",
-            "com.Chapter11Collections.Test.typeinfo.pets.Mouse",
-            "com.Chapter11Collections.Test.typeinfo.pets.Hamster"
+            "typeinfo.pets.Mutt",
+            "typeinfo.pets.Pug",
+            "typeinfo.pets.EgyptianMau",
+            "typeinfo.pets.Manx",
+            "typeinfo.pets.Cymric",
+            "typeinfo.pets.Rat",
+            "typeinfo.pets.Mouse",
+            "typeinfo.pets.Hamster"
     };
     @SuppressWarnings("unchecked")
     private static void loader() {
