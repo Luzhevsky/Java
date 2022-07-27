@@ -12,7 +12,7 @@ public class Controller {
     }
     public void run() {
         Iterator it = eventList.iterator();
-        
+
             while(it.hasNext()){
             //Создать копию, чтобы избежать модификации списка
             //во время выборки элементов:
